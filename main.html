@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Roboto:ital,wght@0,400;1,300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <h1>Cake Checklist</h1>
+        <h3>cake budget</h3>
+        <label for="budget">$</label>
+        <input type="number" min="0" step="0.01" name="budget" id="budget" required onchange="setBudget()"><br>
+        <label for="nSlices">Number of Slices (2-12):</label><br>
+        <input type="number" name="nSlices" id="nSlices" min="2" max="12" required onchange="calculateTotal()">
+    </div>
+    <br>
+   <form id="cakeForm">
+        <div id="">
+            <h3>Style of Cake</h3>
+            <label for="style">Choose a Style:</label><br>
+            <select name="style" id="" onchange="calculateTotal()">
+                <option value="trad">Traditional</option>
+                <option value="contemp">Contemporary</option>
+                <option value="drama">Dramatic</option>
+                <option value="ornate">Ornate</option>
+                <option value="simple">Simple</option>
+                <option value="regal">Regal</option>
+                <option value="unique">Unique</option>
+            </select>
+        </div>
+        <div class="column left">
+            <h3>Flavours & Fillings</h3>
+            <h5>$10/slice</h5>
+            <label for="flavour">Please select a flavour and or filling:</label><br>
+            <label for="flavour"><input type="radio" onclick="calculateTotal()" name="flavour"
+                    id="choco">Chocolate</label><br>
+            <label for="flavour"><input type="radio" onclick="calculateTotal()" name="flavour" id="chocoMud">Chocolate
+                Mud</label><br>
+            <label for="flavour"><input type="radio" onclick="calculateTotal()" name="flavour" id="wChoco">White
+                Chocolate</label><br>
+            <label for="flavour"><input type="radio" onclick="calculateTotal()" name="flavour" id="mocha">Mocha</label><br>
+            <label for="flavour"><input type="radio" onclick="calculateTotal()" name="flavour"
+                    id="truffle">Truffle</label><br>
+            <label for="flavour"><input type="radio" onclick="calculateTotal()" name="flavour"
+                    id="mousse">Mousse</label><br>
+            <label for="flavour"><input type="radio" onclick="calculateTotal()" name="flavour"
+                    id="caramel">Caramel</label><br>
+            <label for="flavour"><input type="radio" onclick="calculateTotal()" name="flavour"
+                    id="citrus">Lemon/Citrus</label><br>
+            <label for="flavour"><input type="radio" onclick="calculateTotal()" name="flavour"
+                    id="orange">Orange</label><br>
+            <label for="flavour"><input type="radio" onclick="calculateTotal()" name="flavour" id="carrot">Carrot
+                (spice)</label><br>
+            <label for="flavour"><input type="radio" onclick="calculateTotal()" name="flavour" id="bAndC">Berries & Whipped
+                Cream</label><br>
+        </div>
+        <div class="column middle">
+            <div>
+                <h3>Decorations</h3>
+                <h5>$20/slice</h5>
+                <label for="decor">Please pick a decoration</label>
+                <select name="decor" id="" onchange="calculateTotal()">
+                    <option value="sugrFlwr">Sugar Flowers</option>
+                    <option value="frshFlwr">Fresh Flowers</option>
+                    <option value="chocShave">Chocolate Shavings</option>
+                    <option value="gold">Gold or Silver Leaf</option>
+                    <option value="pearl">Pearls</option>
+                    <option value="lattice">Latticework</option>
+                    <option value="pipe">Piping</option>
+                    <option value="caketop">Cake Top</option>
+                </select>
+            </div>
+            <div>
+                <h3>Colours</h3>
+                <h5>$5/slice</h5>
+                <label for="colour">Please select a colour</label>
+                <select name="colour" id="" onchange="calculateTotal()">
+                    <option value="white">White</option>
+                    <option value="ivory">Ivory</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="peach">Peach</option>
+                    <option value="red">Red</option>
+                    <option value="pink">Pink</option>
+                    <option value="lave">Lavender</option>
+                </select>
+            </div>
+        </div>
+        <div class="column right">
+            <h3>Shape & Structure</h3>
+            <h5>Please select a shape/structure</h5>
+            <label for="shape"><input type="radio" name="shape" onclick="calculateTotal()" value="round">Round
+                ($20)</label><br>
+            <label for="shape"><input type="radio" name="shape" onclick="calculateTotal()" value="oval">Oval ($40)</label><br>
+            <label for="shape"><input type="radio" name="shape" onclick="calculateTotal()" value="square">Square
+                ($30)</label><br>
+            <label for="shape"><input type="radio" name="shape" onclick="calculateTotal()" value="rect">Rectangular
+                ($20)</label><br>
+            <label for="shape"><input type="radio" name="shape" onclick="calculateTotal()" value="heart">Heart
+                ($50)</label><br>
+            <label for="shape"><input type="radio" name="shape" onclick="calculateTotal()" value="sheet">Sheet
+                ($40)</label><br>
+            <label for="shape"><input type="radio" name="shape" onclick="calculateTotal()" value="tieredC">Tiered (with
+                columns) ($50)</label><br>
+            <label for="shape"><input type="radio" name="shape" onclick="calculateTotal()" value="tieredS">Tiered, stacked
+                ($40)</label><br>
+            <label for="shape"><input type="radio" name="shape" onclick="calculateTotal()" value="cupCakes">Cupcakes
+                ($20)</label><br>
+        </div>
+    </form>
+
+    <button onclick="submit()">Submit</button>
+    <div class="bottomnav">
+        <div class="col">
+            <p>Sub Total: </p>
+            <p>Tax: </p>
+            <p>Total Price: </p>
+        </div>
+        <div class="col">
+            <p id="subtotal" class="number"></p>
+            <p id="tax" class="number"></p>
+            <p id="totalfinal" class="number"></p>
+        </div>
+    </div>
+</body>
+
+</html>

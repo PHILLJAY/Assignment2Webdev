@@ -1,0 +1,68 @@
+body{
+    background-color:white ;
+    font-family: 'Roboto', sans-serif;
+}
+h1{
+    font-family: 'Patrick Hand', cursive;
+    color: #002A32;
+    font-size: 72px;
+    margin: 20px;
+    text-align: center;
+    transition: color 1s;
+}
+h1:hover{
+    color: #F40076;
+}
+h3{
+    color: #002A32;
+    margin: 2px;
+}
+h5{
+    color: #002A32;
+    margin: 2px; 
+    margin-bottom: 10px;
+}
+
+select{
+    margin-bottom: 10px;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    transition: width 0.25s;
+}
+
+.bottomnav {
+    background:#EBA6A9 ;
+    overflow: hidden;
+    position: fixed;
+    margin-left: 75%;
+    transition: margin-left 0.5s;
+    transition: border-radius 2;
+    transition: bottom 2;
+    bottom: 50px;
+    width: 160px;
+    border-radius: 15px 15px 0px 15px;
+}
+.bottomnav p{
+margin-left: 10px;
+}
+
+.col{
+    float: left;
+}
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    
+    .bottomnav{
+        margin-left: 50%;
+        bottom: 0;
+        border-radius: 15px 15px 0px 0px
+    }
+}
