@@ -42,7 +42,7 @@ select{
     transition: border-radius 2;
     transition: bottom 2;
     bottom: 50px;
-    width: 160px;
+    width: 170px;
     border-radius: 15px 15px 0px 15px;
 }
 .bottomnav p{
@@ -58,7 +58,7 @@ margin-left: 10px;
     }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 680px) {
     
     .bottomnav{
         margin-left: 50%;
