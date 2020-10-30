@@ -1,4 +1,4 @@
-var slices = 1;
+var slices = 2;
 var budget = 0;
 var totalfinal = 0
 
@@ -52,9 +52,9 @@ function setSlices() {
 function setBudget() {
     if (parseFloat(document.getElementById('budget').value) > 0) {
         budget = parseFloat(document.getElementById('budget').value);
-    } else if (parseFloat(document.getElementById('budget').value) = 0) {
+    } else if (parseFloat(document.getElementById('budget').value) == 0) {
         budget = 10000000000;
     }
-    
+    return;
 }
 
