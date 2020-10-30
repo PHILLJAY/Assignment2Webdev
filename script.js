@@ -46,9 +46,15 @@ function getShape() {
 }
 
 function setSlices() {
+    if((document.getElementById('nSlices').value)<=12&&(document.getElementById('nSlices').value)>=2)
     slices = document.getElementById('nSlices').value;
 }
-function setBudget(){
-    budget = parseFloat(document.getElementById('budget').value);
+function setBudget() {
+    if (parseFloat(document.getElementById('budget').value) > 0) {
+        budget = parseFloat(document.getElementById('budget').value);
+    } else if (parseFloat(document.getElementById('budget').value) = 0) {
+        budget = 10000000000;
+    }
+    
 }
 
